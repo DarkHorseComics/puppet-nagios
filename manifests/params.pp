@@ -46,6 +46,7 @@ class nagios::params {
             $nrpe_pid_file      = '/var/run/nagios/nrpe.pid'
             $nrpe_cfg_dir       = '/etc/nagios/nrpe.d'
             $megaclibin         = '/opt/bin/MegaCli'
+            $nrpe_service       = 'nagios-nrpe-server'
 
         }
         default: {
