@@ -39,7 +39,7 @@ class nagios::params {
             $megaclibin         = '/usr/sbin/MegaCli'
         }
         'Debian', 'Ubuntu': {
-            $nrpe_package       = [ 'nagios-nrpe-server', 'nagios-plugins' ]
+            $nrpe_package       = [ 'nagios-nrpe-server' ]
             $nrpe_package_alias = 'nagios-nrpe'
             $nrpe_user          = 'nagios'
             $nrpe_group         = 'nagios'
