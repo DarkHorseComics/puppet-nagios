@@ -40,7 +40,7 @@ class nagios::params {
         }
         'Debian', 'Ubuntu': {
             $nrpe_package       = [ 'nagios-nrpe-server' ]
-            $nrpe_package_alias = 'nagios-nrpe'
+            $nrpe_package_alias = 'nrpe'
             $nrpe_user          = 'nagios'
             $nrpe_group         = 'nagios'
             $nrpe_pid_file      = '/var/run/nagios/nrpe.pid'
