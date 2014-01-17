@@ -39,7 +39,7 @@ class nagios::params {
             $megaclibin         = '/usr/sbin/MegaCli'
         }
         'Debian', 'Ubuntu': {
-            $nrpe_package       = [ 'nagios-nrpe-server', 'v']
+            $nrpe_package       = [ 'nagios-nrpe-server', 'nagios-plugins']
             $nrpe_package_alias = 'nrpe'
             $nrpe_user          = 'nagios'
             $nrpe_group         = 'nagios'
@@ -98,7 +98,7 @@ class nagios::params {
         'Debian', 'Ubuntu': {
             $plugin_dir = "/usr/${libdir}/nagios/plugins"
             # No package splitting in Debian
-            @package { 'nagios-nrpe-server':
+            @package { '$nagios_plugins_packages:
                 tag    => $nagios_plugins_packages,
                 ensure => installed,
             }
