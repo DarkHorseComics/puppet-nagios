@@ -18,7 +18,6 @@ class nagios::params {
     $nagios_service = 'nagios'
     $nagios_user    = 'nagios'
     # nrpe
-    $nrpe_service   = 'nrpe'
     $nrpe_cfg_file  = '/etc/nagios/nrpe.cfg'
     case $::operatingsystem {
         'Gentoo': {
@@ -29,6 +28,7 @@ class nagios::params {
             $nrpe_pid_file      = '/run/nrpe.pid'
             $nrpe_cfg_dir       = '/etc/nagios/nrpe.d'
             $megaclibin         = '/opt/bin/MegaCli'
+            $nrpe_service       = 'nrpe'
         }
         'Fedora', 'Scientific': {
             $nrpe_package       = [ 'nrpe', 'nagios-plugins' ]
@@ -37,6 +37,7 @@ class nagios::params {
             $nrpe_pid_file      = '/var/run/nrpe.pid'
             $nrpe_cfg_dir       = '/etc/nrpe.d'
             $megaclibin         = '/usr/sbin/MegaCli'
+            $nrpe_service       = 'nrpe'
         }
         'Debian', 'Ubuntu': {
             $nrpe_package       = [ 'nagios-nrpe-server' ]
@@ -56,6 +57,7 @@ class nagios::params {
             $nrpe_pid_file      = '/var/run/nrpe.pid'
             $nrpe_cfg_dir       = '/etc/nagios/nrpe.d'
             $megaclibin         = '/usr/sbin/MegaCli'
+            $nrpe_service       = 'nrpe'
         }
     }
     # Optional plugin packages, to be realized by tag where needed
