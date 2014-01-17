@@ -96,7 +96,7 @@ class nagios::params {
             }
         }
         'Debian', 'Ubuntu': {
-            $plugin_dir = "/usr/${libdir}/nagios/plugins"
+            $plugin_dir = "/usr/lib/nagios/plugins"
             # No package splitting in Debian
             @package { 'nagios-plugins':
                 tag    => $name,
